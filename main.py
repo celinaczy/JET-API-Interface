@@ -4,11 +4,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, FloatField, SubmitField
 from wtforms.validators import DataRequired
 
-
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-
 
 
 class SearchByPostCode(FlaskForm):
@@ -20,14 +17,14 @@ class SearchByPostCode(FlaskForm):
 def home():
     form = SearchByPostCode()
     if form.validate_on_submit():
-        return redirect(url_for('restaurants', code=request.form['code']))
+        return redirect(url_for('restaurants'))
 
     return render_template("index.html", form=form)
 
 
 @app.route("/restaurants", methods=['GET', 'POST'])
 def restaurants():
-    postcode = "EC4M7RF"
+    postcode = request.form['code']
     url = f"https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/{postcode}"
 
     headers = {
