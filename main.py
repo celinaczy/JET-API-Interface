@@ -18,7 +18,7 @@ def home():
     response.raise_for_status()  # raises exception when not a 2xx response
     restaurants = response.json()["restaurants"][:10]
 
-    return render_template('index.html')
+    return render_template('index.html', restaurants=restaurants)
 
 
 if __name__ == '__main__':
