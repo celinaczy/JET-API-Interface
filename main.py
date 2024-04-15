@@ -11,7 +11,7 @@ app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 class SearchByPostCode(FlaskForm):
     code = StringField('Enter Post Code', validators=[
         DataRequired(),
-        Length(min=6, max=6, message="Postal code must be 6 characters long.")
+        Length(min=6, max=8, message="Postal code must be at least 6 characters long.")
     ])
 
     submit = SubmitField('Search')
@@ -28,7 +28,7 @@ def home():
 
 @app.route("/restaurants", methods=['GET', 'POST'])
 def restaurants():
-    postcode = request.form['code']
+    postcode = request.form['code'].upper().replace(' ', '')
     url = f"https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/{postcode}"
 
     headers = {
