@@ -6,8 +6,10 @@
 </head>
 <body>
 <h1> Just Eat Takeaway.com Software Engineering Coding Assignment </h1>
-
-
+<form method="POST" action="{{ url_for('restaurants') }}">
+{{ form.code.label }} {{ form.code(size=30) }}
+{{ form.submit }}
+</form>
 
 </body>
 </html>

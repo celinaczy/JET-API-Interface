@@ -1,13 +1,31 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect
 import requests
+from flask_wtf import FlaskForm
+from wtforms import StringField, FloatField, SubmitField
+from wtforms.validators import DataRequired
+
+
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 
 
-@app.route("/")
+
+class SearchByPostCode(FlaskForm):
+    code = StringField('Enter Post Code', validators=[DataRequired()])
+    submit = SubmitField('Search')
+
+
+@app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template("index.html")
-@app.route("/restaurants")
+    form = SearchByPostCode()
+    if form.validate_on_submit():
+        return redirect(url_for('restaurants', code=request.form['code']))
+
+    return render_template("index.html", form=form)
+
+
+@app.route("/restaurants", methods=['GET', 'POST'])
 def restaurants():
     postcode = "EC4M7RF"
     url = f"https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/{postcode}"
