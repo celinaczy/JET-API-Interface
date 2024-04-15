@@ -1,15 +1,19 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, flash
 import requests
 from flask_wtf import FlaskForm
-from wtforms import StringField, FloatField, SubmitField
-from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired, Length
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 
 
 class SearchByPostCode(FlaskForm):
-    code = StringField('Enter Post Code', validators=[DataRequired()])
+    code = StringField('Enter Post Code', validators=[
+        DataRequired(),
+        Length(min=6, max=6, message="Postal code must be 6 characters long.")
+    ])
+
     submit = SubmitField('Search')
 
 
@@ -35,6 +39,10 @@ def restaurants():
     response = requests.get(url, headers=headers)
     response.raise_for_status()  # raises exception when not a 2xx response
     restaurants = response.json()["restaurants"][:10]
+
+    if not restaurants:
+        flash("No restaurants found for the provided postal code. Make sure you're entering a correct code.", 'error')
+        return redirect(url_for('home'))
 
     return render_template('restaurants.html', restaurants=restaurants)
 
