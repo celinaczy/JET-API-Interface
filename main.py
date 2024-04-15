@@ -11,7 +11,7 @@ app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 class SearchByPostCode(FlaskForm):
     code = StringField('Enter Post Code', validators=[
         DataRequired(),
-        Length(min=6, max=8, message="Postal code must be at least 6 characters long.")
+        Length(min=5, max=8, message="Postal code must be at least 5 characters long.")
     ])
 
     submit = SubmitField('Search')
