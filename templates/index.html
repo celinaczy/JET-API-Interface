@@ -7,21 +7,7 @@
 <body>
 <h1> Just Eat Takeaway.com Software Engineering Coding Assignment </h1>
 
-<ol type="1">
-{% for restaurant in restaurants: %}
-<li> name: {{restaurant["name"]}} </li>
-    cuisines:
-    {% for cuisine in restaurant["cuisines"]: %}
-        {{ cuisine["name"] }} -
-    {% endfor %}
-    <br>
-    rating: {{restaurant["rating"]["starRating"]}}
-    <br>
-    address: {{restaurant["address"]["firstLine"]}}, {{restaurant["address"]["city"]}}
 
-
-{% endfor %}
-</ol>
 
 </body>
 </html>

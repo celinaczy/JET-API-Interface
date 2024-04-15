@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, redirect
 import requests
 
 app = Flask(__name__)
@@ -6,6 +6,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    return render_template("index.html")
+@app.route("/restaurants")
+def restaurants():
     postcode = "EC4M7RF"
     url = f"https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/{postcode}"
 
@@ -18,7 +21,7 @@ def home():
     response.raise_for_status()  # raises exception when not a 2xx response
     restaurants = response.json()["restaurants"][:10]
 
-    return render_template('index.html', restaurants=restaurants)
+    return render_template('restaurants.html', restaurants=restaurants)
 
 
 if __name__ == '__main__':
