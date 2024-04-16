@@ -13,8 +13,8 @@
         {% for restaurant in restaurants %}
             <div class="card mb-3" style="max-width: 800px;">
                 <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start" alt="...">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="{{ restaurant['logoUrl'] }}" class="img-fluid rounded-start" alt="restaurant logo">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
