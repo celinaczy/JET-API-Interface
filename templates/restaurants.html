@@ -26,7 +26,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">{{ restaurant['name'] }}</h5>
-                            <h6 class="card-title">{{ restaurant['address']['firstLine'] }}, {{ restaurant['address']['city'] }}</h6>
+                            <h6 class="card-title">{{ restaurant['address']['firstLine'] }}, {{ restaurant['address']['city'] }}, {{ restaurant['address']['postalCode'] }}</h6>
                             <p class="card-text">
                                 {% for cuisine in restaurant['cuisines'] %}
                                     {{ cuisine['name'] }}{% if not loop.last %}, {% endif %}
