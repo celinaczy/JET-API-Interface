@@ -16,11 +16,21 @@
             align-items: center;
             opacity: 0.85
         }
+
+        .form-container {
+            background-color: black;
+            opacity:0.9;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
 <div class="background-image">
-<div class="justify-content-center">
+<div class="form-container text-white">
     <h1> Find restaurants nearby </h1>
     <form method="POST" action="{{ url_for('restaurants') }}">
             {% with messages = get_flashed_messages() %}
