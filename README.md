@@ -24,7 +24,9 @@ and it should take care of creating the virtual environment and installing depen
 <details>
 <summary>Option 2:Through terminal </summary>
 Alternatively, you can clone and run the app in your terminal
+
 * Clone this repository to your local machine:
+
 ```
 git clone https://github.com/celinaczy/JET-api-task.git
 ```
