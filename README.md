@@ -6,6 +6,9 @@ form the UK and works for UK postal codes.
 <br> 
 It is built with Python and the Flask framework on the backend; the User Interface is built with Bootstrap and optimized for responsiveness.
 
+[JET app demo 2.mp4](..%2F..%2FVideos%2FCaptures%2FJET%20app%20demo%202.mp4)
+[JET app demo phone.mp4](..%2F..%2FVideos%2FCaptures%2FJET%20app%20demo%20phone.mp4)
+
 ## Prerequisites 
 * Python 3.x
 * pip 
@@ -18,7 +21,7 @@ and you're ready to run main.py and access the application at http://127.0.0.1:5
 If you're using an IDE such as PyCharm you can clone the repository directly through their interface 
 and it should take care of creating the virtual environment and installing dependencies for you. 
 
-[video here]
+[pycharm-instructions.mp4](..%2F..%2FDownloads%2Fpycharm-instructions.mp4)
 
 </details>
 <details>
