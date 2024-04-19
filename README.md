@@ -115,4 +115,4 @@ Some ideas for added functionalities:
 * Sort restaurants by some criteria (e.g. rating) to ensure the most relevant restaurants are being displayed 
 * Allow showing more results, for example by including a 'show more' button at the bottom 
 * Enhance the user interface with additional features such as filtering or sorting options
-
+* Link addresses to Google Maps
