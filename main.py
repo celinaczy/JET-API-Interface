@@ -28,6 +28,9 @@ def home():
 
 @app.route("/restaurants", methods=['GET', 'POST'])
 def restaurants():
+    if request.method == 'GET':
+        return redirect(url_for('home'))
+
     postcode = request.form['code'].upper().replace(' ', '')
     url = f"https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/{postcode}"
 
