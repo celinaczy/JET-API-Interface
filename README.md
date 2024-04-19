@@ -17,13 +17,13 @@ https://github.com/celinaczy/JET-api-task/assets/48793247/b3af9b4d-e394-4824-962
 
 ## How to run
 Running the application is pretty straightforward; you just need to clone the repository, install requirements.txt,
-and you're ready to run main.py and access the application at http://127.0.0.1:5000/. More instructions below.
+and you're ready to run main.py and access the application at http://127.0.0.1:5000/. More detailed instructions below.
 <details>
 <summary>Option 1: Through your IDE</summary>
 If you're using an IDE such as PyCharm you can clone the repository directly through their interface 
 and it should take care of creating the virtual environment and installing dependencies for you. 
 
-https://github.com/celinaczy/JET-api-task/assets/48793247/156f09c5-228f-40ea-a975-36a66123f473
+https://github.com/celinaczy/JET-API-Interface/assets/48793247/88eb2ef9-a2e7-4571-92ca-dde124d30eeb
 
 </details>
 <details>
@@ -115,6 +115,6 @@ In general, I wanted to loosely replicate the way the search results are display
 I think I correctly implemented all the required functionalities, however, there are further improvements that could be made.
 Some ideas for added functionalities: 
 * Sort restaurants by some criteria (e.g. rating) to ensure the most relevant restaurants are being displayed 
-* Allow showing more results, for example by including a 'show more' button at the bottom 
+* Allow showing more than 10 results, for example by including a 'show more' button at the bottom 
 * Enhance the user interface with additional features such as filtering or sorting options
 * Link addresses to Google Maps
