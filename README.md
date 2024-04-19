@@ -2,12 +2,14 @@
 
 This application allows users to find nearby restaurants by postal code. 
 It uses the Just Eat API to fetch restaurant data based on the postal code entered. It is oriented towards users 
-form the UK and works for UK postal codes.
+from the UK and works for UK postal codes.
 <br> 
 It is built with Python and the Flask framework on the backend; the User Interface is built with Bootstrap and optimized for responsiveness.
 
-[JET app demo 2.mp4](..%2F..%2FVideos%2FCaptures%2FJET%20app%20demo%202.mp4)
-[JET app demo phone.mp4](..%2F..%2FVideos%2FCaptures%2FJET%20app%20demo%20phone.mp4)
+## Preview
+https://github.com/celinaczy/JET-api-task/assets/48793247/d86b2429-0844-41ca-a367-19ec789d3f6a
+
+https://github.com/celinaczy/JET-api-task/assets/48793247/b3af9b4d-e394-4824-9625-4938fe9b33bf
 
 ## Prerequisites 
 * Python 3.x
@@ -21,7 +23,7 @@ and you're ready to run main.py and access the application at http://127.0.0.1:5
 If you're using an IDE such as PyCharm you can clone the repository directly through their interface 
 and it should take care of creating the virtual environment and installing dependencies for you. 
 
-[pycharm-instructions.mp4](..%2F..%2FDownloads%2Fpycharm-instructions.mp4)
+https://github.com/celinaczy/JET-api-task/assets/48793247/156f09c5-228f-40ea-a975-36a66123f473
 
 </details>
 <details>
@@ -82,9 +84,9 @@ run main.py and access the application on http://127.0.0.1:5000/
 </details>
 
 ## Approach to task and assumptions
-I adopted the mvp approach and started by implementing the critical requirements - making an API call within the Flask 
+I adopted the MVP approach and started by implementing the critical requirements - making an API call within the Flask 
 framework and displaying required pieces of data (Name, Cuisines, Rating - as a number, Address) on index.html. I used the 
-requests package to hande the API call. As per requirements, only first 10 results are displayed. 
+requests package to handle the API call. As per requirements, only the first 10 results are displayed. 
 <br><br>
 It was not requested explicitly, but I thought it only would make sense to build an interface through which the user could 
 input a postal code and then be presented with the results. I used WTF Forms for this part. 
@@ -93,13 +95,13 @@ input a postal code and then be presented with the results. I used WTF Forms for
 - The input can include a space but doesn't have to.
 - The input will be processed correctly regardless of whether the characters are lower or upper case.
 
-Now, I placed this form on index.html and redirected user to restaurants.html after submitting the form with a valid postal code.
+Now, I placed this form on index.html and redirected the user to restaurants.html after submitting the form with a valid postal code.
 In case of the code being incorrect (returning an empty restaurant object) the user would be redirected to the home page and shown
 a flash error message prompting them to input a correct code. 
 <br> <br>
 Once I worked out those functionalities, I moved on to improving the UI. I chose to use Bootstrap for simplicity and 
 to help ensure a responsive design. I decided to display each restaurant in a separate card div and added the restaurant logo 
-for a more visually pleasing effect, as I noticed the logo url was also being sent with the restaurant data. 
+for a more visually pleasing effect, as I noticed the logo URL was also being sent with the restaurant data. 
 <br> 
 I chose not to include explicit labels for the pieces of data displayed (such as: 'name:' , 'address:' ) as I found them to be 
 self-explanatory. I just added a star emoji to be displayed with the rating, to ensure the user would understand what the number represents. 
