@@ -19,7 +19,7 @@ https://github.com/celinaczy/JET-api-task/assets/48793247/b3af9b4d-e394-4824-962
 Running the application is pretty straightforward; you just need to clone the repository, install requirements.txt,
 and you're ready to run main.py and access the application at http://127.0.0.1:5000/. More instructions below.
 <details>
-<summary>Option 1:Through your IDE</summary>
+<summary>Option 1: Through your IDE</summary>
 If you're using an IDE such as PyCharm you can clone the repository directly through their interface 
 and it should take care of creating the virtual environment and installing dependencies for you. 
 
@@ -27,7 +27,7 @@ https://github.com/celinaczy/JET-api-task/assets/48793247/156f09c5-228f-40ea-a97
 
 </details>
 <details>
-<summary>Option 2:Through terminal </summary>
+<summary>Option 2: Through terminal </summary>
 Alternatively, you can clone and run the app in your terminal
 
 * Clone this repository to your local machine:
@@ -75,8 +75,9 @@ deactivate
 </details>
 <details>
 <summary> Option 3: Download ZIP </summary>
-If you don't have git bash configured on your machine you can simply download and unpack a ZIP folder with this repo, 
-then install dependencies by running 
+If you don't have Git configured on your machine or prefer not to use it, you 
+can simply download and unpack a ZIP folder with this repository. Then, install dependencies by running:
+
 ```
 pip install -r requirements.txt
 ```
