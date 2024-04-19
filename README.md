@@ -33,11 +33,11 @@ Alternatively, you can clone and run the app in your terminal
 * Clone this repository to your local machine:
 
 ```
-git clone https://github.com/celinaczy/JET-api-task.git
+git clone https://github.com/celinaczy/JET-API-Interface.git
 ```
 * Navigate to the project directory:
 ```
-cd JET-api-task
+cd JET-API-Interface
 ```
 * Set up a virtual environment (optional but recommended):
 
