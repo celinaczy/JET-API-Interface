@@ -91,7 +91,7 @@ requests package to handle the API call. As per requirements, only the first 10 
 <br><br>
 It was not requested explicitly, but I thought it only would make sense to build an interface through which the user could 
 input a postal code and then be presented with the results. I used WTF Forms for this part which meant I needed to include a
-`SECRET_KEY`. I decided to hard-code not to complicate the setup process and because I assumed this  application is intended 
+`SECRET_KEY`. I decided to hard-code it in order not to complicate the setup process and because I assumed this  application is intended 
 solely for local development and there's no sensitive data involved.
 ### Assumptions about Input Validation for Postal Codes
 - The postal code must be between 5 and 8 characters in length.
