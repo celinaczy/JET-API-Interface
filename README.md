@@ -90,23 +90,25 @@ framework and displaying required pieces of data (Name, Cuisines, Rating - as a 
 requests package to handle the API call. As per requirements, only the first 10 results are displayed. 
 <br><br>
 It was not requested explicitly, but I thought it only would make sense to build an interface through which the user could 
-input a postal code and then be presented with the results. I used WTF Forms for this part. 
+input a postal code and then be presented with the results. I used WTF Forms for this part which meant I needed to include a
+`SECRET_KEY`. I decided to hard-code not to complicate the setup process and because I assumed this  application is intended 
+solely for local development and there's no sensitive data involved.
 ### Assumptions about Input Validation for Postal Codes
 - The postal code must be between 5 and 8 characters in length.
 - The input can include a space but doesn't have to.
 - The input will be processed correctly regardless of whether the characters are lower or upper case.
 
-Now, I placed this form on index.html and redirected the user to restaurants.html after submitting the form with a valid postal code.
+I placed this form on index.html and redirected the user to restaurants.html after submitting the form with a valid postal code.
 In case of the code being incorrect (returning an empty restaurant object) the user would be redirected to the home page and shown
 a flash error message prompting them to input a correct code. 
 <br> <br>
 Once I worked out those functionalities, I moved on to improving the UI. I chose to use Bootstrap for simplicity and 
 to help ensure a responsive design. I decided to display each restaurant in a separate card div and added the restaurant logo 
 for a more visually pleasing effect, as I noticed the logo URL was also being sent with the restaurant data. 
-<br> 
+<br> <br>
 I chose not to include explicit labels for the pieces of data displayed (such as: 'name:' , 'address:' ) as I found them to be 
 self-explanatory. I just added a star emoji to be displayed with the rating, to ensure the user would understand what the number represents. 
-<br> 
+<br> <br>
 In general, I wanted to loosely replicate the way the search results are displayed on the official https://www.just-eat.co.uk/ website. 
 
 ## Improvements
